@@ -3,11 +3,10 @@ import java.util.Vector;
 
 class Registro {
     private String nome;
-    private String valor;
 
-    public Registro(String nome, String valor) {
+    public Registro(String nome) {
         this.nome = nome;
-        this.valor = valor;
+
     }
 
     @Override
@@ -23,9 +22,7 @@ class Registro {
     @Override
     public String toString() {
         return "Registro{" +
-                "nome='" + nome + '\'' +
-                ", valor='" + valor + '\'' +
-                '}';
+                "nome='" + nome + '}';
     }
 
     public String getNome() {
@@ -36,17 +33,9 @@ class Registro {
         this.nome = nome;
     }
 
-    public String getValor() {
-        return valor;
-    }
-
-    public void setValor(String valor) {
-        this.valor = valor;
-    }
-
 }
 
-public class App {
+public class V {
 
     public static void main(String[] args) {
         Vector<Registro> registros = new Vector<>();
@@ -70,9 +59,7 @@ public class App {
                         System.out.println("Registro já existente.");
                         break;
                     }
-                    System.out.println("Informe o valor:");
-                    String valor = scanner.next();
-                    registros.add(new Registro(nome, valor));
+                    registros.add(new Registro(nome));
                     break;
                 case 2:
                     for (Registro registro : registros) {
@@ -96,9 +83,11 @@ public class App {
                         System.out.println("Registro não encontrado.");
                         break;
                     }
-                    System.out.println("Informe o novo valor:");
-                    String novoValor = scanner.next();
-                    registroAlterar.setValor(novoValor);
+                    System.out.print("Digte o nome para alteração:");
+                    String nomeA = scanner.next();
+                    System.out.println("Feito");
+
+                    registroAlterar.setNome(nomeA);
                     break;
                 case 5:
                     System.out.println("Informe o nome do registro a ser removido:");
@@ -134,5 +123,4 @@ public class App {
         return null;
     }
 
-    
 }
