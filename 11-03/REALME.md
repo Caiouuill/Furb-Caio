@@ -1,5 +1,5 @@
 Vector:
-  O Vector é uma classe legada que implementa a interface List.
+O Vector é uma classe legada que implementa a interface List.
   Ele é semelhante ao ArrayList, mas com algumas diferenças importantes.
 Características:
   Sincronizado: O Vector é thread-safe, o que significa que pode ser usado em ambientes concorrentes.
