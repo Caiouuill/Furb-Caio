@@ -1,0 +1,1 @@
+Eu utilizei arraylist nessa atividade, pois para mim era mais facil de entender e manipular, por ja tive esperiencias com arraylist anteriormente e não consegui pensar em uyma forma de implementar as filas e pilhas de uma maneira eficiente.
